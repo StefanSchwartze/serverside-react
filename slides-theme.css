@@ -30,6 +30,38 @@
   line-height: 1.3;
   font-weight: inherit; }
 
+.white {
+  color: #fff;
+}
+.small-logo {
+  width: 240px;
+  text-align: center;
+  margin: auto !important;
+  /* display: block; */
+}
+.small-stefan {
+  text-align: center;
+  margin: auto !important;
+  /* border-radius: 50%; */
+  overflow: hidden;
+  /* display: block; */
+  height: 240px !important;
+  padding: 12px;
+  /* display: block; */
+}
+.small-stefan img {
+  border-radius: 50%;
+}
+
+.decrease-height img {
+  max-height: 560px !important;
+  position: relative;
+}
+
+.small-link {
+  font-size: 18px;
+}
+
 /*********************************************
  * HEADERS
  *********************************************/
@@ -259,3 +291,273 @@
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+
+
+
+
+/*
+  Responsive CSS Moto G mockup by Henri Peetsmann
+  https://codepen.io/henripeetsmann/
+*/
+
+.css-iphone {
+  max-width: 300px; /* Set the desired maximum width of the moto g */
+  min-width: 50px; /* Set the desired minimum width of the moto g */
+  margin: 0 auto; /* Align mockup to center */
+}
+
+.css-iphone div {
+  box-sizing: border-box !important; /* Just in case */
+}
+
+/* Phone body */
+.css-iphone .iphone-body {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 198%;
+  background: #242424;
+  
+  -webkit-border-radius: 16% / 8.0808%;
+     -moz-border-radius: 16% / 8.0808%;
+          border-radius: 16% / 8.0808%;
+}
+
+/* Glass edge - Browser may not render the top, right, bottom, left offset evenly */
+.css-iphone .iphone-body:before {
+  content: '';
+  position: absolute;
+  top: 0.8%;
+  right: 1.584%;
+  bottom: 0.8%;
+  left: 1.584%;
+  background: #080808;
+  
+  -webkit-border-radius: 15% / 7.5757%;
+     -moz-border-radius: 15% / 7.5757%;
+          border-radius: 15% / 7.5757%;
+}
+
+/* Glare - Browser may not render the top and right offset evenly */
+.css-iphone .iphone-body:after {
+  display: none; /* Hide initially */
+  content: '';
+  position: absolute;
+  top: 0.8%; 
+  right: 1.584%;
+  bottom: 0.8%;
+  left: 1.584%;
+  
+  background: none; /* Hide the gradient on older browsers */
+  background:    -moz-linear-gradient(55deg, rgba(0,0,0,0) 66%, rgba(255,255,255,0.05) 66%); /* FF3.6+ */
+  background: -webkit-linear-gradient(36deg, rgba(0,0,0,0) 66%, rgba(255,255,255,0.05) 66%); /* Chrome10+ and Safari5.1+ compute the degree differently */
+  background:      -o-linear-gradient(55deg, rgba(0,0,0,0) 66%, rgba(255,255,255,0.05) 66%); /* Opera 11.10+ */
+  background:     -ms-linear-gradient(55deg, rgba(0,0,0,0) 66%, rgba(255,255,255,0.05) 66%); /* IE10+ */
+  background:         linear-gradient(55deg, rgba(0,0,0,0) 66%, rgba(255,255,255,0.05) 66%);
+  
+  -webkit-border-top-right-radius: 15% 7.5757%;
+      -moz-border-radius-topright: 15% 7.5757%;
+          border-top-right-radius: 15% 7.5757%;
+}
+
+/* Only show glare, if the class is applied */
+.css-iphone.with-glare .iphone-body:after { display: block; }
+
+
+/* Buttons */
+
+/*Power Button*/
+.css-iphone .iphone-buttons-right {
+  position: absolute;
+  top: 21.4646%;
+  right: -.6%;
+  width: 1.3%;
+  height: 6.8181%;
+  background: #242424;
+  
+  -webkit-border-top-right-radius: 50% 5.2446%;
+      -moz-border-radius-toptight: 50% 5.2446%;
+          border-top-right-radius: 50% 5.2446%;
+  
+  -webkit-border-bottom-right-radius: 50% 5.2446%;
+      -moz-border-radius-bottomright: 50% 5.2446%;
+          border-bottom-right-radius: 50% 5.2446%;  
+}
+
+
+/* Left Buttons */
+
+/* Lock Button */
+.css-iphone .iphone-buttons-left{
+  position: absolute;
+  top: 13.4646%;
+  left: -.6%;
+  width: 1.3%;
+  height: 3.8181%;
+  background: #242424;
+  
+  -webkit-border-top-left-radius: 50% 5.2446%;
+      -moz-border-radius-topleft: 50% 5.2446%;
+          border-top-left-radius: 50% 5.2446%;
+  
+  -webkit-border-bottom-left-radius: 50% 5.2446%;
+      -moz-border-radius-bottomleft: 50% 5.2446%;
+          border-bottom-left-radius: 50% 5.2446%;  
+}
+
+/* Vol Down Button */
+.css-iphone .iphone-buttons-left:before {
+  content: '';
+  position: absolute;
+  top: 390.925%;
+  right: 0;
+  height: 180%;
+  width: 100%;
+  background: #242424;
+  
+  -webkit-border-top-left-radius: 50% 2.9136%;
+      -moz-border-radius-topleft: 50% 2.9136%;
+          border-top-left-radius: 50% 2.9136%;
+  
+  -webkit-border-bottom-left-radius: 50% 2.9136%;
+      -moz-border-radius-bottomleft: 50% 2.9136%;
+          border-bottom-left-radius: 50% 2.9136%; 
+}
+
+/* Vol Up Button */
+.css-iphone .iphone-buttons-left:after {
+  content: '';
+  position: absolute;
+  top: 180.925%;
+  right: 0;
+  height: 150%;
+  width: 100%;
+  background: #242424;
+  
+  -webkit-border-top-left-radius: 50% 2.9136%;
+      -moz-border-radius-topleft: 50% 2.9136%;
+          border-top-left-radius: 50% 2.9136%;
+  
+  -webkit-border-bottom-left-radius: 50% 2.9136%;
+      -moz-border-radius-bottomleft: 50% 2.9136%;
+          border-bottom-left-radius: 50% 2.9136%; 
+}
+
+
+/* Home Button */
+.css-iphone .iphone-home-button {
+  content: '';
+  position: absolute;
+  top: 103.7819%;
+  left: 50%;
+  width: 17.5410%;
+  height: 9.710%;
+  margin-left: -7.6705%;
+  background: #242424;
+
+  
+  -webkit-border-radius: 50% / 50%;
+     -moz-border-radius: 50% / 50%;
+          border-radius: 50% / 50%;
+}
+
+.css-iphone .iphone-home-button:after {
+  content: '';
+  position: absolute;
+  top: 5.7819%;
+  left: 17%;
+  width: 85%;
+  height: 85%;
+  margin-left: -8.6705%;
+  background: #080808;
+
+  
+  -webkit-border-radius: 50% / 50%;
+     -moz-border-radius: 50% / 50%;
+          border-radius: 50% / 50%;
+}
+
+
+
+
+/* Position the screen and give make it the right size, ratio 16:9 */
+.css-iphone .iphone-screen-position {
+  position: absolute;
+  top: 9.3434%;
+  width: 86.5%;
+  left: 6.75%;
+  height: 0;
+  margin: 0;
+  padding-bottom: 153.7778%; /* Ratio 16:9 */
+}
+
+/* Camera */
+.css-iphone .iphone-screen-position:before {
+  content: '';
+  position: absolute;
+  top: -7.5%;
+  left: 28.4161%;
+  width: 4.7803%;
+  height: 2.4637%;
+  border-radius: 50%;
+  background: #222;
+}
+
+/* Speaker */
+.css-iphone .iphone-screen-position:after {
+  content: '';
+  position: absolute;
+  top: -6.7819%;
+  left: 50%;
+  width: 20.5410%;
+  height: 1.2276%;
+  margin-left: -9.6705%;
+  background: #333;
+  
+  -webkit-border-radius: 7% / 50%;
+     -moz-border-radius: 7% / 50%;
+          border-radius: 7% / 50%;
+}
+
+/* Give parent (this element) a "height", so that child elements can use height: 100%;*/
+.css-iphone .iphone-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #fff; /* bg color if content is not big enough, or rendering is buggy */ 
+  display: flex;
+  justify-content: center;
+}
+
+/* Stuff on the screen */
+.css-iphone .iphone-screen img,
+.css-iphone .iphone-screen iframe {
+  width: auto;
+  height: 100%;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  align-self: center;
+}
+
+.css-iphone .iphone-screen iframe {
+  width: 100%;
+}
+
+
+
+.aligned-items {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 100px;
+  color: black;
+}
+.aligned-items img {
+  max-width: 220px;
+}
